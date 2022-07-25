@@ -1,20 +1,17 @@
 import * as React from "react";
 import { Search } from "@mui/icons-material";
-import {
-  AppBar,
-  Button,
-  createTheme,
-  InputBase,
-  Toolbar,
-  Typography,
-} from "@mui/material";
+import { AppBar, Button, InputBase, Toolbar, Typography } from "@mui/material";
 import { Box } from "@mui/system";
 import Menu from "@mui/material/Menu";
 import MenuItem from "@mui/material/MenuItem";
+import { createTheme, ThemeProvider } from "@mui/material/styles";
+import { blue } from "@mui/material/colors";
+import { styled } from "@mui/material/styles";
 
-const theme = createTheme({
-  components: {},
-});
+const MyButton = styled(Button)`
+  background-color: #0d47a1;
+  font-weight: bold;
+`;
 
 function Navbar() {
   const [anchorEl, setAnchorEl] = React.useState(null);
@@ -44,17 +41,9 @@ function Navbar() {
           />
         </Box>
         <Box sx={{ width: "75%" }}></Box>
-        <Button
-          id="basic-button"
-          variant="contained"
-          style={{backgroundColor: "#003399", fontWeight: 'bold'}}
-          aria-controls={open ? "basic-menu" : undefined}
-          aria-haspopup="true"
-          aria-expanded={open ? "true" : undefined}
-          onClick={handleClick}
-        >
+        <MyButton variant="contained" onClick={handleClick} disableRipple={true}>
           sync.io
-        </Button>
+        </MyButton>
         <Menu
           id="basic-menu"
           anchorEl={anchorEl}
