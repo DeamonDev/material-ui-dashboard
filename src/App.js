@@ -17,7 +17,7 @@ function App() {
     <Box>
       <Navbar />
       <Dashboard />
-      </Box>
+    </Box>
   );
 }
 
