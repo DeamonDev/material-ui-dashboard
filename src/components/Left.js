@@ -1,9 +1,16 @@
 import { Apps, ArrowBackIos, ArrowForward, Home } from "@mui/icons-material";
 import { Card, Typography } from "@mui/material";
 import { Box } from "@mui/system";
+import LeftItem from './LeftItem';
 
 const onMouseOnItem = (e) => {
   console.log(e);
+};
+
+const icons = {
+  home: Home,
+  apps: Apps,
+  arrows: ArrowForward,
 };
 
 function Left() {
@@ -73,6 +80,7 @@ function Left() {
           gap: 2,
           alignItems: "center",
           backgroundColor: "#0099cc",
+          marginBottom: 1,
           color: "white",
           "&:hover": {
             backgroundColor: "green",
@@ -84,6 +92,7 @@ function Left() {
           iOS
         </Typography>
       </Card>
+      <LeftItem name="Bills" icon="money"/>
     </Card>
   );
 }
