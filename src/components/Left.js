@@ -17,7 +17,7 @@ function Left() {
   return (
     <Card
       sx={{
-        backgroundColor: "#0066ff",
+        backgroundColor: "#323738",
         paddingLeft: -8,
         height: "100%",
         flexDirection: "column",

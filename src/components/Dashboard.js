@@ -1,4 +1,5 @@
 import { Box, Grid } from "@mui/material";
+import Center from "./Center";
 import Left from "./Left";
 
 function Dashboard() {
@@ -8,7 +9,7 @@ function Dashboard() {
           <Left />
         </Grid>
         <Grid item xs={7}>
-          <p>Center</p>
+          <Center />
         </Grid>
         <Grid item xs={3}>
           <p>Right</p>
